@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/5548f5ed00.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- visjs.org  -->
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-light"
+      style="
+        font-size: 25px;
+        font-family: sans-serif;
+      "
+    >
+      <div class="title">Shortest Path Finder</div>
+    </nav>
+    <div id="container">
+      <div id="mynetwork"></div>
+      <div id="container2">
+        <span
+          id="temptext2"
+          style="width: 100%; text-align: center; font-size: large"
+        >
+          Find least time path from
+          <select name="source" id="source">
+            <option value="none" selected disabled hidden>select source</option>
+            <option value="1">Delhi</option>
+            <option value="2">Mumbai</option>
+            <option value="3">Gujarat</option>
+            <option value="4">Goa</option>
+            <option value="5">Kerala</option>
+            <option value="6">Jammu</option>
+            <option value="7">Punjab</option>
+            <option value="8">Assam</option>
+            <option value="9">Himachal Pradesh</option>
+            <option value="10">Sikkim</option>
+            <option value="11">Tripura</option>
+            <option value="12">Madhya Pradesh</option>
+            <option value="13">Gurugram</option>
+            <option value="14">Noida</option>
+            <option value="15">Haryana</option>
+          </select>
+          to
+          <select name="destination" id="destination">
+            <option value="none" selected disabled hidden>
+              select destination
+            </option>
+            <option value="1">Delhi</option>
+            <option value="2">Mumbai</option>
+            <option value="3">Gujarat</option>
+            <option value="4">Goa</option>
+            <option value="5">Kerala</option>
+            <option value="6">Jammu</option>
+            <option value="7">Punjab</option>
+            <option value="8">Assam</option>
+            <option value="9">Himachal Pradesh</option>
+            <option value="10">Sikkim</option>
+            <option value="11">Tripura</option>
+            <option value="12">Madhya Pradesh</option>
+            <option value="13">Gurugram</option>
+            <option value="14">Noida</option>
+            <option value="15">Haryana</option>
+          </select>
+        </span>
+        <br /><br />
+        <span
+          id="temptext"
+          style="width: 100%; text-align: center; font-size: large"
+        >
+          Red link represents bus travel time :
+          <i class="fa fa-bus" aria-hidden="true" style="color: orange"></i
+          ><br />
+          Green link represents flight travel time :
+          <i class="fa fa-plane" aria-hidden="true" style="color: green"></i
+          ><br /><br />
+          Click SOLVE to find the shortest path from source to destination!
+        </span>
+        <div id="mynetwork2" style="display: none"></div>
+      </div>
+    </div>
+
+    <div>
+      <br />
+      <button type="button" class="btn btn-danger" id="generate-graph">
+        Get New Problem
+      </button>
+      <br />
+      <button type="button" class="btn btn-success" id="solve">Solve</button>
+    </div>
+  </body>
+</html>
